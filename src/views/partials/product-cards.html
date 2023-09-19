@@ -1,0 +1,45 @@
+<section class="product__section">
+  <h2>Products</h2>
+
+  <div class="product__wrapper">
+    <ul class="product__list">
+      {{#products}}
+      <li class="product__item">
+        <article class="product__card">
+          <h3>{{name}}</h3>
+          <img
+            src="{{image.url}}"
+            alt="{{image.alt}}"
+            width="{{image.width}}"
+            loading="lazy"
+            style="view-transition-name: product-{{id}}"
+          />
+          <div class="product__buttons-container">
+            <a
+              role="button"
+              href="/product/{{id}}"
+              hx-get="/product/{{id}}"
+              hx-push-url="true"
+              hx-swap="transition:true"
+              class="product__button--details secondary outline"
+            >
+              Details
+            </a>
+            <button
+              hx-post="/cart/{{id}}"
+              hx-target=".cart__quantity-indicator"
+              class="secondary"
+            >
+              Buy
+              <span
+                aria-busy="true"
+                class="htmx-indicator loading-indicator"
+              ></span>
+            </button>
+          </div>
+        </article>
+      </li>
+      {{/products}}
+    </ul>
+  </div>
+</section>

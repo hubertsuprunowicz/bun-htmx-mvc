@@ -1,0 +1,26 @@
+<section class="product-demo">
+  <h1>Product demo</h1>
+  <div class="product-demo__wrapper">
+    <h2>{{product.name}}</h2>
+    <div class="product-demo__presentation">
+      <img
+        src="{{product.image.url}}"
+        alt="{{product.image.alt}}"
+        width="{{product.image.width}}"
+        loading="lazy"
+        style="view-transition-name: product-{{product.id}}"
+      />
+      <p class="product-demo__presentation--description">
+        {{product.description}}
+      </p>
+    </div>
+    <button
+      hx-post="/cart/{{product.id}}"
+      hx-target=".cart__quantity-indicator"
+      class="secondary"
+    >
+      Buy
+      <span aria-busy="true" class="htmx-indicator loading-indicator"></span>
+    </button>
+  </div>
+</section>

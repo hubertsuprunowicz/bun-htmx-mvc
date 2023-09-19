@@ -1,0 +1,12 @@
+<nav class="menu">
+  <ul>
+    <li><a href="/" hx-get="/" hx-push-url="true" hx-target="body">Home</a></li>
+  </ul>
+  <ul>
+    <li>
+      <a href="/cart" hx-get="/cart" hx-push-url="true"
+        >cart <span class="cart__quantity-indicator">{{itemsInCart}}</span></a
+      >
+    </li>
+  </ul>
+</nav>

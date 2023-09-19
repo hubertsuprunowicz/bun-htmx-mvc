@@ -1,0 +1,35 @@
+:root {
+  --document-inner-width: 1400px;
+  --remove-color: #c62828;
+  --spacing-3: 20px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  max-width: var(--document-inner-width);
+  margin: 0 auto;
+  margin-bottom: 0;
+  padding: var(--spacing-3);
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: var(--background-color);
+}
+
+.htmx-indicator {
+  display: none;
+}
+.htmx-request .loading-indicator {
+  display: inline;
+}
+.htmx-request.loading-indicator {
+  display: inline;
+}

@@ -1,0 +1,19 @@
+{
+  "name": "server",
+  "version": "0.1.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "bun run --watch src/index.ts"
+  },
+  "module": "src/index.js",
+  "dependencies": {
+    "@elysiajs/static": "^0.6.0",
+    "elysia": "latest",
+    "mustache": "^4.2.0"
+  },
+  "devDependencies": {
+    "bun-types": "latest",
+    "@types/mustache": "^4.2.2",
+    "@faker-js/faker": "^8.0.2"
+  }
+}

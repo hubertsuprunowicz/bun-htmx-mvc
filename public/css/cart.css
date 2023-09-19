@@ -1,0 +1,7 @@
+.cart__quantity-indicator::before {
+  content: "(";
+}
+
+.cart__quantity-indicator::after {
+  content: ")";
+}

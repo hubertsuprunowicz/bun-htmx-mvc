@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bun & HTMX & MVC</title>
+    <meta name="htmx-config" content='{"globalViewTransitions":true}' />
+    <script src="https://unpkg.com/htmx.org@1.9.5"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@picocss/pico@1/css/pico.min.css"
+    />
+    <link rel="stylesheet" type="text/css" href="public/css/index.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/atomic.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/product.css" />
+    <link rel="stylesheet" type="text/css" href="public/css/cart.css" />
+  </head>
+
+  <body>
+    <header>{{>navigation}}</header>
+    <main hx-target="this">{{>content}}</main>
+  </body>
+</html>

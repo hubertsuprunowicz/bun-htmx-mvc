@@ -1,0 +1,7 @@
+.d-none {
+  display: none;
+}
+
+.remove {
+  background-color: var(--remove-color);
+}
